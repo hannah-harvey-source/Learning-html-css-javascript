@@ -2,4 +2,7 @@ body {
     margin-top: 70px;
     background: #2F4F4F;
     color: #fff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }

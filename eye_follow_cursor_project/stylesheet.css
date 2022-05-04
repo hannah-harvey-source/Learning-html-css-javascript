@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #dad785;
+}
+
+.container {
+    position: relative;
+    cursor: pointer;
+}
+
+.iris {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border: 5px solid #333;
+    background-color: #0077b6;
+    border-radius: 50%;
+    left: 40px;
+    top: 30px;
+}
+
+.iris::before {
+    content: "";
+    position: absolute;
+    background-color: #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    top: 22%;
+    left: 22%;
+}
+
+.iris::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(225,225,225, 0.4);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    top: 35px;
+    left: 65%;
+    box-shadow: -35px 20px rgba(225,225,225,0.4);
+}
+
+.eyeball {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border: 5px solid #333;
+    border-radius: 100% 0;
+    box-shadow: 5px 5px 5px rgba(0,0, 0,0.3);
+    transform: rotate(45deg);
+    top: -10px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.eyeLid {
+    position: absolute;
+    border-top: 5px solid #333;
+    border-left: 5px solid #333;
+    border-radius: 100% 0;
+    width: 150px;
+    height: 150px;
+    top: -30px;
+    left: 3px;
+    transform: rotate(45deg);
+    transition: .2s;
+    z-index: 10;
+}
+
+.container:hover .eyeLid {
+    transform: rotate(-45deg) rotateX(160deg);
+}
+
+.container:hover .lid {
+    transform: translateY(90px);
+}
+
+.lid {
+    position: absolute;
+    z-index: 9;
+    background-color: #dad785;
+    width: 295px;
+    height: 270px;
+    border-radius: 50%;
+    top: -248px;
+    left: -68px;
+    transition: .2s;
+}
